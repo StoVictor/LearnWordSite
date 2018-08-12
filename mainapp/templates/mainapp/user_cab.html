@@ -1,0 +1,17 @@
+{% load static %}
+<!Doctype>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'mainapp/main.css' %}"
+    </head>
+    <body>
+        {{ user }}
+        <div class='login-page-button'>
+        <a href="{% url 'logout' %}">Выйти</a>
+        </div>
+        <div class='login-page-button'>
+        <a href="{% url 'password_change' %}">Сменить пароль</a>
+        </div>
+    </body>
+</html>

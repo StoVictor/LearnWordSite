@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+.login-page-button {
+    
+    align-self: flex-end;
+    padding: 10px;
+    margin: 10px;
+    font-size: 24px;
+    background-color: #77bbf7;
+    box-shadow: 3px 5px 3px 0px black;
+}
+.login-page-button a {
+    color: white;
+    text-decoration: none;
+    
+    
+}
+.greeting-text {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    width: 420px;
+    align-self: center;
+    
+}

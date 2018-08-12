@@ -1,0 +1,51 @@
+{% load static %}
+<!Doctype html>
+<html>
+    <head>
+        <title>English Word Site</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'mainapp/auth.css' %}"
+    </head>
+    <body>
+        <div class="login-block">
+            <form action="{% url 'registration' %}" enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                <div>
+                    <label>Псевдоним:</label>
+                    {{uform.username}}
+                </div>
+                <div>
+                    <label>Почта:</label>
+                    {{uform.email}}
+                </div>
+                <div>
+                    <label>Пароль:</label>
+                    {{uform.password1}}
+                </div>
+                <div>
+                    <label>Повторить пароль:</label>
+                    {{uform.password2}}
+                </div>
+                <div class="submit-registration">
+                    <button  type="submit">Регистрация</button>
+                </div>
+            </form>
+            {% for error in uform.non_field_errors%}
+                <li>{{error}}</li>
+            {% endfor %}
+            {% for error in uform.username.errors %}
+                <li>{{error}}</li>
+            {% endfor %}
+           
+            {% for error in uform.email.errors %}
+                <li>{{error}}</li>
+            {% endfor %}
+            {% for error in uform.password1.errors %}
+                <li>{{error}}</li>
+            {% endfor %}
+           
+            {% for error in uform.password2.errors %}
+                <li>{{error}}</li>
+            {% endfor %}
+        </div>
+    </body>
+</html>

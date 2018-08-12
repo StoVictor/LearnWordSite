@@ -1,0 +1,13 @@
+{% load static %}
+<!Doctype html>
+<html>
+    <head>
+        <title>English Word Site</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'mainapp/main.css' %}">
+    </head>
+    <body>
+    <div class="login-page-button"><a href="{% url 'login'  %}">Войти</a></div>
+    <div class="greeting-text">Добро пожаловать на сайт по изучению слов, создай свой набор карточек и начни учить прямо сейчас!</div>
+    </body>
+</html>
